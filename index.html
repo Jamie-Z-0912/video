@@ -1,0 +1,70 @@
+﻿<html lang="en">
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="videoPlay.css" type="text/css" />
+<style>
+	body {	
+		max-width: 640px;
+		margin: 0 auto;	
+	}
+	img{
+		display: block;
+		width: 100%;
+	}
+	p{ 
+		float: left;
+		width: 310px;
+		margin: 5px;
+	}
+	#info, #message, #message1 , #message2, #message3{
+		text-align:left; 
+		padding:10px; 
+		position:absolute; 
+		color:white; 
+		font-weight:700; 
+		text-shadow:0 0 6px #000;	
+	}
+	#info { top:60; }
+	#message  {top:80; }
+	#message1 {top:100; }
+	#message2 {top:120; }
+	#message3 {top:140; }
+</style>
+</head>
+<body>
+
+<!--播放窗口-->
+<div id="videoWin" STYLE="border-style:solid;border-width:0pt; border-color:red;padding:0px;border:0px;z-index: 0;" > </div>
+<!--消息-->
+<div id="info"></div>
+<div id="message" STYLE="z-index: 10;"></div>
+<div id="message1" STYLE="z-index: 10;"></div>
+<div id="message2" STYLE="z-index: 10;"></div>
+<div id="message3" STYLE="z-index: 10;"></div>
+<!--///////////////////////////// -->
+<p><img  src="img/tv_mmgw.jpg" onclick="VideoPlay('tv_mmgw.mp4')" /></p>
+<p><img  src="img/tv_fcwr.jpg" onclick="VideoPlay('tv_fcwr.mp4')" /></p>
+<p><img  src="img/05_005.jpg" onclick="VideoPlay('tv_wtez.mp4')" /></p>
+<p><img  src="img/mov_fl.jpg"  onclick="VideoPlay('mov_fczlm.mp4')" /></p>
+<p><img  src="img/mov_zjz.jpg" onclick="VideoPlay('mov_zjz.mp4')" /></p>
+<p><img  src="img/mov_xz.jpg"  onclick="VideoPlay('mov_xzqy.mp4')" /></p>
+<p><img  src="img/mam.jpg"  onclick="VideoPlay('view_mam.mp4')" /></p>
+<p><img  src="img/paris.jpg"  onclick="VideoPlay('view_paris.mp4')" /></p>
+
+<!--///////////////////////////// -->
+<script src="js/three.min.js"></script>
+<script src="js/VRControls.js"></script> 
+<script src="js/stats.min.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/gyro.js"></script>
+<script src="js/control.js"></script>
+<script src="js/WebGlView.js"></script>
+<script src="js/GLPlayer.js"></script>
+<!--////////////////////////// -->
+<script>
+	// video.src	= 'tv_mmgw.mp4.mp4';
+	var MYPlayer=GLPlayer(document.getElementById( 'videoWin' ));
+	videoPlayCache=true;
+</script>
+</body>
+</html>
